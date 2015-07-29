@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   get("/random/:min/:max", { :controller=> "calculations", :action => "random_number"})
 
-  get("/payment/:principal/:apr/:years", { :controller=> "calculations", :action => "payment"})
+  get("/payment/:apr/:years/:principal", { :controller=> "calculations", :action => "payment"})
 end

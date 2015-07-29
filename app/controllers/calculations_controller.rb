@@ -27,7 +27,7 @@ class CalculationsController < ApplicationController
   def payment
 
     @principal = params["principal"].to_f
-    @apr = (params["apr"].to_f)/10
+    @apr = (params["apr"].to_f)/100
     @years = params["years"].to_f
 
     @monthly_payment = (@principal*((@apr/100)/(12.0*(1.0-(1.0+(@apr/100)/12.0)**(-@years*12.0))))).round(2)
